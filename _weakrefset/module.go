@@ -1,7 +1,7 @@
 package _weakrefset
 import (
 	πg "github.com/pygolin/runtime"
-	// _ "github.com/pygolin/stdlib/__go__/grumpy"
+	// _ "github.com/pygolin/stdlib/__go__/pygolin"
 )
 var Code *πg.Code
 func init() {
@@ -91,9 +91,9 @@ func init() {
 			case 0:
 			default: panic("unexpected function state")
 			}
-			// line 5: from '__go__/grumpy' import WeakRefType as ref
+			// line 5: from '__go__/pygolin' import WeakRefType as ref
 			πF.SetLineno(5)
-			if πTemp002, πE = πg.ImportModule(πF, "__go__/grumpy"); πE != nil {
+			if πTemp002, πE = πg.ImportModule(πF, "__go__/pygolin"); πE != nil {
 				continue
 			}
 			πTemp001 = πTemp002[0]

@@ -1,7 +1,7 @@
 package __builtin__
 import (
 	πg "github.com/pygolin/runtime"
-	// _ "github.com/pygolin/stdlib/__go__/grumpy"
+	// _ "github.com/pygolin/stdlib/__go__/pygolin"
 )
 var Code *πg.Code
 func init() {
@@ -46,9 +46,9 @@ func init() {
 			if πE = πF.Globals().SetItem(πF, ß__doc__.ToObject(), πg.NewStr("Built-in Python identifiers.").ToObject()); πE != nil {
 				continue
 			}
-			// line 19: from '__go__/grumpy' import Builtins
+			// line 19: from '__go__/pygolin' import Builtins
 			πF.SetLineno(19)
-			if πTemp002, πE = πg.ImportModule(πF, "__go__/grumpy"); πE != nil {
+			if πTemp002, πE = πg.ImportModule(πF, "__go__/pygolin"); πE != nil {
 				continue
 			}
 			πTemp001 = πTemp002[0]

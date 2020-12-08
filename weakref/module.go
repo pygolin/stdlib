@@ -1,7 +1,7 @@
 package weakref
 import (
 	πg "github.com/pygolin/runtime"
-	// _ "github.com/pygolin/stdlib/__go__/grumpy"
+	// _ "github.com/pygolin/stdlib/__go__/pygolin"
 	// _ "github.com/pygolin/stdlib/UserDict"
 	// _ "github.com/pygolin/stdlib/copy"
 	// _ "github.com/pygolin/stdlib/exceptions"
@@ -111,9 +111,9 @@ func init() {
 			if πE = πF.Globals().SetItem(πF, ßUserDict.ToObject(), πTemp001); πE != nil {
 				continue
 			}
-			// line 23: from '__go__/grumpy' import WeakRefType as ReferenceType
+			// line 23: from '__go__/pygolin' import WeakRefType as ReferenceType
 			πF.SetLineno(23)
-			if πTemp002, πE = πg.ImportModule(πF, "__go__/grumpy"); πE != nil {
+			if πTemp002, πE = πg.ImportModule(πF, "__go__/pygolin"); πE != nil {
 				continue
 			}
 			πTemp001 = πTemp002[0]

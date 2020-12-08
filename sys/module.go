@@ -1,7 +1,7 @@
 package sys
 import (
 	πg "github.com/pygolin/runtime"
-	// _ "github.com/pygolin/stdlib/__go__/grumpy"
+	// _ "github.com/pygolin/stdlib/__go__/pygolin"
 	// _ "github.com/pygolin/stdlib/__go__/unicode"
 	// _ "github.com/pygolin/stdlib/__go__/os"
 	// _ "github.com/pygolin/stdlib/__go__/runtime"
@@ -117,9 +117,9 @@ func init() {
 			if πE = πF.Globals().SetItem(πF, ßArgs.ToObject(), πTemp003); πE != nil {
 				continue
 			}
-			// line 18: from '__go__/grumpy' import SysModules, MaxInt, Stdin as stdin, Stdout as stdout, Stderr as stderr  # pylint: disable=g-multiple-import
+			// line 18: from '__go__/pygolin' import SysModules, MaxInt, Stdin as stdin, Stdout as stdout, Stderr as stderr  # pylint: disable=g-multiple-import
 			πF.SetLineno(18)
-			if πTemp002, πE = πg.ImportModule(πF, "__go__/grumpy"); πE != nil {
+			if πTemp002, πE = πg.ImportModule(πF, "__go__/pygolin"); πE != nil {
 				continue
 			}
 			πTemp001 = πTemp002[0]

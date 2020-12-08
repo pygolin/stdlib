@@ -1,7 +1,7 @@
 package types_test
 import (
 	πg "github.com/pygolin/runtime"
-	// _ "github.com/pygolin/stdlib/__go__/grumpy"
+	// _ "github.com/pygolin/stdlib/__go__/pygolin"
 	// _ "github.com/pygolin/stdlib/types"
 )
 var Code *πg.Code
@@ -40,9 +40,9 @@ func init() {
 			if πE = πF.Globals().SetItem(πF, ßtypes.ToObject(), πTemp001); πE != nil {
 				continue
 			}
-			// line 17: from '__go__/grumpy' import (FunctionType, MethodType, ModuleType, StrType,  # pylint: disable=g-multiple-import
+			// line 17: from '__go__/pygolin' import (FunctionType, MethodType, ModuleType, StrType,  # pylint: disable=g-multiple-import
 			πF.SetLineno(17)
-			if πTemp002, πE = πg.ImportModule(πF, "__go__/grumpy"); πE != nil {
+			if πTemp002, πE = πg.ImportModule(πF, "__go__/pygolin"); πE != nil {
 				continue
 			}
 			πTemp001 = πTemp002[0]

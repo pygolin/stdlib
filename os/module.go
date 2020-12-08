@@ -7,7 +7,7 @@ import (
 	// _ "github.com/pygolin/stdlib/__go__/reflect"
 	// _ "github.com/pygolin/stdlib/_syscall"
 	// _ "github.com/pygolin/stdlib/sys"
-	// _ "github.com/pygolin/stdlib/__go__/grumpy"
+	// _ "github.com/pygolin/stdlib/__go__/pygolin"
 	// _ "github.com/pygolin/stdlib/__go__/path/filepath"
 	// _ "github.com/pygolin/stdlib/__go__/sync"
 	// _ "github.com/pygolin/stdlib/__go__/runtime"
@@ -350,9 +350,9 @@ func init() {
 			if πE = πF.Globals().SetItem(πF, ßSeparator.ToObject(), πTemp003); πE != nil {
 				continue
 			}
-			// line 24: from '__go__/grumpy' import (NewFileFromFD, StartThread, ToNative)
+			// line 24: from '__go__/pygolin' import (NewFileFromFD, StartThread, ToNative)
 			πF.SetLineno(24)
-			if πTemp002, πE = πg.ImportModule(πF, "__go__/grumpy"); πE != nil {
+			if πTemp002, πE = πg.ImportModule(πF, "__go__/pygolin"); πE != nil {
 				continue
 			}
 			πTemp001 = πTemp002[0]
