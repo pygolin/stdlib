@@ -1,19 +1,25 @@
 package sys
+
 import (
 	πg "github.com/pygolin/runtime"
-	// _ "github.com/pygolin/stdlib/__go__/pygolin"
 	// _ "github.com/pygolin/stdlib/__go__/unicode"
+	// _ "github.com/pygolin/stdlib/__go__/pygolin"
 	// _ "github.com/pygolin/stdlib/__go__/os"
 	// _ "github.com/pygolin/stdlib/__go__/runtime"
 )
+
 var Code *πg.Code
+
 func init() {
 	Code = πg.NewCode("<module>", "/usr/lib/python2.7/sys.py", nil, 0, func(πF *πg.Frame, _ []*πg.Object) (*πg.Object, *πg.BaseException) {
-		var πR *πg.Object; _ = πR
-		var πE *πg.BaseException; _ = πE
+		var πR *πg.Object
+		_ = πR
+		var πE *πg.BaseException
+		_ = πE
 		ßArgs := πg.InternStr("Args")
 		ßFalse := πg.InternStr("False")
 		ßGOOS := πg.InternStr("GOOS")
+		ßInternStr := πg.InternStr("InternStr")
 		ßMaxInt := πg.InternStr("MaxInt")
 		ßMaxRune := πg.InternStr("MaxRune")
 		ßNone := πg.InternStr("None")
@@ -52,6 +58,7 @@ func init() {
 		ßignore_environment := πg.InternStr("ignore_environment")
 		ßinspect := πg.InternStr("inspect")
 		ßinteractive := πg.InternStr("interactive")
+		ßintern := πg.InternStr("intern")
 		ßlittle := πg.InternStr("little")
 		ßmaxint := πg.InternStr("maxint")
 		ßmaxsize := πg.InternStr("maxsize")
@@ -94,9 +101,12 @@ func init() {
 		for ; πF.State() >= 0; πF.PopCheckpoint() {
 			switch πF.State() {
 			case 0:
-			case 1: goto Label1
-			case 2: goto Label2
-			default: panic("unexpected function state")
+			case 1:
+				goto Label1
+			case 2:
+				goto Label2
+			default:
+				panic("unexpected function state")
 			}
 			// line 15: """System-specific parameters and functions."""
 			πF.SetLineno(15)
@@ -117,7 +127,7 @@ func init() {
 			if πE = πF.Globals().SetItem(πF, ßArgs.ToObject(), πTemp003); πE != nil {
 				continue
 			}
-			// line 18: from '__go__/pygolin' import SysModules, MaxInt, Stdin as stdin, Stdout as stdout, Stderr as stderr  # pylint: disable=g-multiple-import
+			// line 18: from '__go__/pygolin' import SysModules, MaxInt, Stdin as stdin, Stdout as stdout, Stderr as stderr, InternStr as intern  # pylint: disable=g-multiple-import
 			πF.SetLineno(18)
 			if πTemp002, πE = πg.ImportModule(πF, "__go__/pygolin"); πE != nil {
 				continue
@@ -155,6 +165,13 @@ func init() {
 				continue
 			}
 			if πE = πF.Globals().SetItem(πF, ßstderr.ToObject(), πTemp003); πE != nil {
+				continue
+			}
+			πTemp001 = πTemp002[0]
+			if πTemp003, πE = πg.GetAttrImport(πF, πTemp001, ßInternStr); πE != nil {
+				continue
+			}
+			if πE = πF.Globals().SetItem(πF, ßintern.ToObject(), πTemp003); πE != nil {
 				continue
 			}
 			// line 19: from '__go__/runtime' import (GOOS as platform, Version)
@@ -229,7 +246,7 @@ func init() {
 			if πE != nil || !πTemp005 {
 				continue
 			}
-			πF.PushCheckpoint(1)            
+			πF.PushCheckpoint(1)
 			// line 24: argv.append(arg)
 			πF.SetLineno(24)
 			πTemp002 = πF.MakeArgs(1)
@@ -341,7 +358,8 @@ func init() {
 				for ; πF.State() >= 0; πF.PopCheckpoint() {
 					switch πF.State() {
 					case 0:
-					default: panic("unexpected function state")
+					default:
+						panic("unexpected function state")
 					}
 					// line 38: """Container class for sys.flags."""
 					πF.SetLineno(38)
@@ -467,12 +485,15 @@ func init() {
 				_ = πTemp001
 				var πTemp002 *πg.Object
 				_ = πTemp002
-				var πR *πg.Object; _ = πR
-				var πE *πg.BaseException; _ = πE
+				var πR *πg.Object
+				_ = πR
+				var πE *πg.BaseException
+				_ = πE
 				for ; πF.State() >= 0; πF.PopCheckpoint() {
 					switch πF.State() {
 					case 0:
-					default: panic("unexpected function state")
+					default:
+						panic("unexpected function state")
 					}
 					// line 61: __frame__().__exc_clear__()
 					πF.SetLineno(61)
@@ -503,9 +524,12 @@ func init() {
 			πF.SetLineno(64)
 			πTemp008 = make([]πg.Param, 0)
 			πTemp003 = πg.NewFunction(πg.NewCode("exc_info", "/usr/lib/python2.7/sys.py", πTemp008, 0, func(πF *πg.Frame, πArgs []*πg.Object) (*πg.Object, *πg.BaseException) {
-				var µe *πg.Object = πg.UnboundLocal; _ = µe
-				var µtb *πg.Object = πg.UnboundLocal; _ = µtb
-				var µt *πg.Object = πg.UnboundLocal; _ = µt
+				var µe *πg.Object = πg.UnboundLocal
+				_ = µe
+				var µtb *πg.Object = πg.UnboundLocal
+				_ = µtb
+				var µt *πg.Object = πg.UnboundLocal
+				_ = µt
 				var πTemp001 *πg.Object
 				_ = πTemp001
 				var πTemp002 *πg.Object
@@ -516,12 +540,15 @@ func init() {
 				_ = πTemp004
 				var πTemp005 []*πg.Object
 				_ = πTemp005
-				var πR *πg.Object; _ = πR
-				var πE *πg.BaseException; _ = πE
+				var πR *πg.Object
+				_ = πR
+				var πE *πg.BaseException
+				_ = πE
 				for ; πF.State() >= 0; πF.PopCheckpoint() {
 					switch πF.State() {
 					case 0:
-					default: panic("unexpected function state")
+					default:
+						panic("unexpected function state")
 					}
 					// line 65: e, tb = __frame__().__exc_info__()  # pylint: disable=undefined-variable
 					πF.SetLineno(65)
@@ -611,19 +638,23 @@ func init() {
 			}
 			πTemp008[0] = πg.Param{Name: "code", Def: πTemp009}
 			πTemp006 = πg.NewFunction(πg.NewCode("exit", "/usr/lib/python2.7/sys.py", πTemp008, 0, func(πF *πg.Frame, πArgs []*πg.Object) (*πg.Object, *πg.BaseException) {
-				var µcode *πg.Object = πArgs[0]; _ = µcode
+				var µcode *πg.Object = πArgs[0]
+				_ = µcode
 				var πTemp001 []*πg.Object
 				_ = πTemp001
 				var πTemp002 *πg.Object
 				_ = πTemp002
 				var πTemp003 *πg.Object
 				_ = πTemp003
-				var πR *πg.Object; _ = πR
-				var πE *πg.BaseException; _ = πE
+				var πR *πg.Object
+				_ = πR
+				var πE *πg.BaseException
+				_ = πE
 				for ; πF.State() >= 0; πF.PopCheckpoint() {
 					switch πF.State() {
 					case 0:
-					default: panic("unexpected function state")
+					default:
+						panic("unexpected function state")
 					}
 					πTemp001 = πF.MakeArgs(1)
 					if πE = πg.CheckLocal(πF, µcode, "code"); πE != nil {
@@ -657,8 +688,10 @@ func init() {
 			πTemp008 = make([]πg.Param, 1)
 			πTemp008[0] = πg.Param{Name: "depth", Def: πg.NewInt(0).ToObject()}
 			πTemp009 = πg.NewFunction(πg.NewCode("_getframe", "/usr/lib/python2.7/sys.py", πTemp008, 0, func(πF *πg.Frame, πArgs []*πg.Object) (*πg.Object, *πg.BaseException) {
-				var µdepth *πg.Object = πArgs[0]; _ = µdepth
-				var µf *πg.Object = πg.UnboundLocal; _ = µf
+				var µdepth *πg.Object = πArgs[0]
+				_ = µdepth
+				var µf *πg.Object = πg.UnboundLocal
+				_ = µf
 				var πTemp001 *πg.Object
 				_ = πTemp001
 				var πTemp002 *πg.Object
@@ -673,14 +706,19 @@ func init() {
 				_ = πTemp006
 				var πTemp007 []*πg.Object
 				_ = πTemp007
-				var πR *πg.Object; _ = πR
-				var πE *πg.BaseException; _ = πE
+				var πR *πg.Object
+				_ = πR
+				var πE *πg.BaseException
+				_ = πE
 				for ; πF.State() >= 0; πF.PopCheckpoint() {
 					switch πF.State() {
 					case 0:
-					case 1: goto Label1
-					case 2: goto Label2
-					default: panic("unexpected function state")
+					case 1:
+						goto Label1
+					case 2:
+						goto Label2
+					default:
+						panic("unexpected function state")
 					}
 					// line 77: f = __frame__()
 					πF.SetLineno(77)
@@ -731,7 +769,7 @@ func init() {
 					if πE != nil || !πTemp004 {
 						continue
 					}
-					πF.PushCheckpoint(1)            
+					πF.PushCheckpoint(1)
 					// line 79: f = f.f_back
 					πF.SetLineno(79)
 					if πE = πg.CheckLocal(πF, µf, "f"); πE != nil {
@@ -811,4 +849,3 @@ func init() {
 	})
 	πg.RegisterModule("sys", Code)
 }
-
